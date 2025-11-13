@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kontak — Suara Rakyat Maluku</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html"><img src="assets/img/logo.png" alt="Logo"><span>Suara Rakyat Maluku</span></a>
+      <nav class="nav">
+        <button id="nav-toggle-7" class="nav-toggle" aria-label="Toggle menu">☰</button>
+        <ul class="nav-list" id="nav-list-7">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="berita.html">Berita</a></li>
+          <li><a href="feature.html">Feature</a></li>
+          <li><a href="infografik.html">Infografik</a></li>
+          <li><a href="opini.html">Opini</a></li>
+          <li><a href="contact.html" class="active">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container section contact-page">
+    <h1>Kontak</h1>
+    <p>Untuk informasi, kontribusi artikel, atau kerjasama: kirim email ke <a href="mailto:suararakyatmaluku@gmail.com">suararakyatmaluku@gmail.com</a></p>
+
+    <form class="contact-form" action="#" onsubmit="alert('Form dummy — silakan hubungi lewat email.'); return false;">
+      <label>
+        Nama
+        <input type="text" name="name" placeholder="Nama lengkap" required>
+      </label>
+      <label>
+        Email
+        <input type="email" name="email" placeholder="email@contoh.com" required>
+      </label>
+      <label>
+        Pesan
+        <textarea name="message" rows="6" placeholder="Tulis pesan..." required></textarea>
+      </label>
+      <button type="submit" class="btn">Kirim</button>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Suara Rakyat Maluku</h4>
+        <p>© 2025 Suara Rakyat Maluku</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Infografik — Persebaran Penduduk Indonesia 2024 | Suara Rakyat Maluku</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">
+        <img src="assets/img/logo.png" alt="Logo">
+        <span>Suara Rakyat Maluku</span>
+      </a>
+      <nav class="nav">
+        <button id="nav-toggle-4" class="nav-toggle">☰</button>
+        <ul class="nav-list" id="nav-list-4">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="berita.html">Berita</a></li>
+          <li><a href="feature.html">Feature</a></li>
+          <li><a href="infografik.html" class="active">Infografik</a></li>
+          <li><a href="opini.html">Opini</a></li>
+          <li><a href="about.html">Tentang</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container section">
+    <h1>Infografik: Persebaran Penduduk Indonesia Tahun 2024</h1>
+
+    <p>Pada tahun 2024, jumlah penduduk Indonesia mencapai lebih dari <strong>282 juta jiwa</strong> yang tersebar di berbagai pulau dengan kepadatan yang sangat berbeda. Data berikut menggambarkan persentase penduduk di tiap pulau utama di Indonesia.</p>
+
+    <!-- Gambar infografik -->
+    <div class="img-wrapper">
+      <img src="assets/img/penduduk.jpg" alt="Infografik Persebaran Penduduk Indonesia" class="info-image">
+      <p class="caption">Gambar: Ilustrasi Persebaran Penduduk Indonesia 2024 (Sumber: BPS)</p>
+    </div>
+
+    <!-- Grafik -->
+    <div class="chart-wrapper">
+      <canvas id="popChart"></canvas>
+    </div>
+
+    <h2>Data Populasi per Pulau (2024)</h2>
+    <table class="info-table">
+      <thead>
+        <tr>
+          <th>Pulau</th>
+          <th>Persentase</th>
+          <th>Jumlah Penduduk (jiwa)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Jawa</td><td>55,93%</td><td>157.979.460</td></tr>
+        <tr><td>Sumatera</td><td>21,81%</td><td>61.600.961</td></tr>
+        <tr><td>Sulawesi</td><td>7,36%</td><td>20.778.959</td></tr>
+        <tr><td>Kalimantan</td><td>6,18%</td><td>17.460.306</td></tr>
+        <tr><td>Sunda-Kecil</td><td>5,56%</td><td>15.703.131</td></tr>
+        <tr><td>Maluku–Papua</td><td>3,17%</td><td>8.954.767</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Analisis dan Implikasi</h2>
+    <p>Dari data di atas, terlihat bahwa Pulau Jawa menjadi pusat kepadatan penduduk dengan hampir 56% total populasi Indonesia. Kepadatan ini menimbulkan berbagai dampak sosial dan ekonomi, seperti kemacetan, keterbatasan lahan, kekurangan air bersih, dan tekanan pada infrastruktur publik.</p>
+
+    <p>Pulau-pulau lain seperti Sumatera dan Sulawesi menunjukkan pertumbuhan yang stabil, sedangkan wilayah Indonesia Timur seperti Maluku dan Papua masih memiliki populasi rendah, namun menyimpan potensi besar untuk pengembangan ekonomi dan sumber daya alam.</p>
+
+    <p>Pemerintah perlu menaruh perhatian lebih pada pemerataan pembangunan dengan strategi desentralisasi, memperkuat sektor pendidikan dan kesehatan di luar Jawa, serta mengembangkan infrastruktur transportasi yang menghubungkan wilayah timur dan barat Indonesia.</p>
+
+    <p>Dengan pengelolaan yang tepat, ketimpangan distribusi penduduk dapat diimbangi dengan pemerataan ekonomi dan peningkatan kualitas hidup masyarakat di seluruh nusantara.</p>
+
+    <p><a href="index.html" class="btn">← Kembali ke Beranda</a></p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Suara Rakyat Maluku</h4>
+        <p>© 2025 Suara Rakyat Maluku | FISIP Universitas Pattimura</p>
+      </div>
+      <div>
+        <h4>Kontak</h4>
+        <p><a href="mailto:suararakyatmaluku@gmail.com">suararakyatmaluku@gmail.com</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+
+  <!-- Grafik Chart.js -->
+  <script>
+    const ctx = document.getElementById('popChart');
+    new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['Jawa', 'Sumatera', 'Sulawesi', 'Kalimantan', 'Sunda-Kecil', 'Maluku–Papua'],
+        datasets: [{
+          data: [55.93, 21.81, 7.36, 6.18, 5.56, 3.17],
+          backgroundColor: ['#003366', '#0059b3', '#0099cc', '#00b386', '#ff6600', '#cc0000']
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { position: 'bottom' },
+          title: { display: true, text: 'Persentase Penduduk per Pulau (2024)' }
+        }
+      }
+    });
+  </script>
+
+  <style>
+    .img-wrapper {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .info-image {
+      width: 70%;
+      max-width: 600px;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    }
+    .caption {
+      font-size: 0.9em;
+      color: #555;
+      margin-top: 6px;
+    }
+    .chart-wrapper {
+      max-width: 320px;
+      height: 250px; /* diperkecil lagi */
+      margin: 0 auto 30px;
+      position: relative;
+    }
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .info-table th, .info-table td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+    .info-table th {
+      background-color: #003366;
+      color: white;
+    }
+    .info-table tr:nth-child(even) { background-color: #f9f9f9; }
+  </style>
+</body>
+</html>
